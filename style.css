@@ -1,0 +1,41 @@
+body {
+    background-color: pink;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.foto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#carta {
+    display: none;
+    margin: 50px;
+    padding: 50px;
+    border: 2px solid black;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+.botao-carta {
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: 20px auto;
+    background-image: url('URL_da_sua_imagem');
+    background-size: cover;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

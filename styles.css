@@ -39,3 +39,48 @@ h1 {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: auto;
+  }
+  
+  .heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+  }
+  
+  .heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+  }
+  
+  .heart::after {
+    left: 0;
+    transform: rotate(45deg);
+  }
+  
+  .heart-container {
+    display: flex;
+    justify-content: space-around;
+    animation: pulse 2s infinite;
+  }

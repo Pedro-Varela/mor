@@ -1,7 +1,9 @@
-function mostrarCarta() {
-    document.getElementById('modal-background').style.display = 'block';
+window.mostrarCarta = function() {
+    const modal = document.getElementById('modal-background');
+    modal.style.display = 'flex';
 }
 
-function fecharCarta() {
-    document.getElementById('modal-background').style.display = 'none';
+window.fecharCarta = function() {
+    const modal = document.getElementById('modal-background');
+    modal.style.display = 'none';
 }

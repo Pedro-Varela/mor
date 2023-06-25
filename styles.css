@@ -109,24 +109,41 @@ h1 {
 }
 
 .foto-container {
-  position: relative; /* isso faz com que a posição absoluta da imagem PNG seja relativa a este contêiner */
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .foto {
-  width: 45%; /* diminuir a largura pode ajudar a evitar sobreposição de imagens */
-  margin: 5px; /* adiciona um pequeno espaço entre as imagens */
+  width: 45%;
+  margin: 2.5%;
 }
 
 .icone {
-  position: absolute; /* isto posiciona a imagem PNG absolutamente em relação ao contêiner das fotos */
-  z-index: 1; /* isto garante que a imagem PNG fique no topo */
-  width: 300px; /* ajuste este valor para o tamanho desejado */
-  left: 50%; /* centraliza horizontalmente a imagem PNG */
-  top: 50%; /* centraliza verticalmente a imagem PNG */
-  transform: translate(-50%, -50%); /* ajusta a centralização para o centro da imagem PNG em vez de seu canto superior esquerdo */
+  position: absolute;
+  z-index: 1;
+  width: 20vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
+
+/* Estilos específicos para telas com largura até 375px (aproximadamente um iPhone 8) */
+@media screen and (max-width: 375px) {
+  .foto-container {
+      flex-direction: column;
+  }
+
+  .foto {
+      width: 80%;
+  }
+
+  .icone {
+      width: 40vw;
+  }
+}
+
 
 
 
